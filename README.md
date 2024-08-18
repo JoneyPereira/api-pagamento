@@ -72,6 +72,9 @@ SPRING_SERVER_PORT=8081
 SPRING_DATA_SOURCE_URL=jdbc:postgresql://localhost:5434/api_pagamento_db
 SPRING_DATA_SOURCE_USERNAME=admin
 SPRING_DATA_SOURCE_PASSWORD=admin
+SPRING_KAFKA_BOOTSTRAP_SERVERS=localhost:9094
+SPRING_KAFKA_PRODUCER_VALUE_SERIALIZER=org.springframework.kafka.support.serializer.JsonSerializer
+SPRING_KAFKA_CONSUMER_VALUE_DESERIALISER=org.springframework.kafka.support.serializer.JsonDeserializer
 ```
 
 > **_NOTA:_**  Ao rodar a aplicação, para acessar o swagger da api basta acessar a seguinte url a depender da porta escolhida

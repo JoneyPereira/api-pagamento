@@ -23,6 +23,17 @@ spring:
   jpa:
     show-sql: true
     open-in-view: false
+  kafka:
+    bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS}
+    producer:
+      value-serializer: ${SPRING_KAFKA_PRODUCER_VALUE_SERIALIZER}
+    consumer:
+      value-deserializer: ${SPRING_KAFKA_CONSUMER_VALUE_DESERIALISER}
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: *
 
 server:
   port: ${SPRING_SERVER_PORT}
