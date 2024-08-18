@@ -62,13 +62,13 @@ Content-Type: application/json
 
 ```
 docker network create redelocal --driver=bridge
-docker run --name carts -e POSTGRES_PASSWORD=admin -e POSTGRES_USER=admin -e POSTGRES_DB=api_pagamento_db --network redelocal -p 5434:5432 -d postgres
+docker docompose up
 ```
 
 2° - Insira essas variáveis de ambiente na aplicação, basta copiar e colar:
 
 ```
-SPRING_SERVER_PORT=8080
+SPRING_SERVER_PORT=8081
 SPRING_DATA_SOURCE_URL=jdbc:postgresql://localhost:5434/api_pagamento_db
 SPRING_DATA_SOURCE_USERNAME=admin
 SPRING_DATA_SOURCE_PASSWORD=admin
